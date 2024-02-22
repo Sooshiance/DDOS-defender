@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 from decouple import config
+from datetime import timedelta
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -133,21 +134,25 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MAX_LIMIT_REQUEST = int(10)
 
 
+# TODO : Time object to restart the server after certain amount of time
+TIME_LAPSE = timedelta(hours=0, minutes=0, seconds=10)
+
+
 # TODO : Cache framework
-CACHES = {
-    'default': {
-        # TODO : You can change the backend to any part of your app you want
-        'BACKEND': 'ddos_guard.cache_backends.MyCustomCacheBackend',
+# CACHES = {
+#     # 'default': {
+#     #     # TODO : You can change the backend to any part of your app you want
+#     #     'BACKEND': 'ddos_guard.cache_backends.MyCustomCacheBackend',
         
-        # TODO : Change the path for cache server as you please
-        'LOCATION': '127.0.0.1:11211',
-    },
-    # TODO : If you have Redis database, you can use it here too
-    # 'default': {
-    #     'BACKEND': 'django_redis.cache.RedisCache',
-    #     'LOCATION': 'redis://127.0.0.1:6379/0',
-    #     'OPTIONS': {
-    #         'CLIENT_CLASS': 'django_redis.client.DefaultClient',
-    #     },
-    # }
-}
+#     #     # TODO : Change the path for cache server as you please
+#     #     'LOCATION': '127.0.0.1:11211',
+#     # },
+#     # TODO : If you have Redis database, you can use it here too
+#     # 'default': {
+#     #     'BACKEND': 'django_redis.cache.RedisCache',
+#     #     'LOCATION': 'redis://127.0.0.1:6379/0',
+#     #     'OPTIONS': {
+#     #         'CLIENT_CLASS': 'django_redis.client.DefaultClient',
+#     #     },
+#     # }
+# }

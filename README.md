@@ -13,7 +13,9 @@ to make server responsible after certain amount of time.
 ## Cache framework
 You can add your cache framework in the `settings.py` to better controling 
 over caching requests.
-I'v added mine.
+I'v added mine but, I make them comment, because the `cache_backends.py` file
+does not configured.
+You configure that file as you please.
 
 ### Session
 I will add details about session staff that if any request does not get a session,
