@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 from decouple import config
-from datetime import timedelta
+from django.utils.timezone import timedelta
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -138,7 +138,7 @@ MAX_LIMIT_REQUEST = int(10)
 TIME_LAPSE = timedelta(hours=0, minutes=0, seconds=10)
 
 
-# TODO : Cache framework
+# TODO : Cache framework to manipulate your cronjob and crontab
 # CACHES = {
 #     # 'default': {
 #     #     # TODO : You can change the backend to any part of your app you want

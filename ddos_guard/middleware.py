@@ -40,8 +40,9 @@ class RequestLimitMiddleware(MiddlewareMixin):
 
         return response
     
-    # TODO : You can add this function to a cron job if you work with Redis
-    # def reset_request_limit():
-    #     # Delete the request count and the last request time from the cache
-    #     cache.delete('request_count')
-    #     cache.delete('last_request_time')
+
+# TODO : You can add this function to a cronjob if you work with Redis
+# def reset_request_limit():
+#     # Delete the request count and the last request time from the cache
+#     cache.delete('request_count')
+#     cache.delete('last_request_time')
