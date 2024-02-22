@@ -9,7 +9,7 @@ If you want to use this :
 <!-- I will add `time` object to the class,
 to make server responsible after certain amount of time. -->
 
-It's done!
+Time object added!
 
 
 ## Cache framework
