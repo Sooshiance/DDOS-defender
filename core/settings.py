@@ -131,3 +131,23 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # TODO : Change this value as you please
 MAX_LIMIT_REQUEST = int(10)
+
+
+# TODO : Cache framework
+CACHES = {
+    'default': {
+        # TODO : You can change the backend to any part of your app you want
+        'BACKEND': 'ddos_guard.cache_backends.MyCustomCacheBackend',
+        
+        # TODO : Change the path for cache server as you please
+        'LOCATION': '127.0.0.1:11211',
+    },
+    # TODO : If you have Redis database, you can use it here too
+    # 'default': {
+    #     'BACKEND': 'django_redis.cache.RedisCache',
+    #     'LOCATION': 'redis://127.0.0.1:6379/0',
+    #     'OPTIONS': {
+    #         'CLIENT_CLASS': 'django_redis.client.DefaultClient',
+    #     },
+    # }
+}
