@@ -142,7 +142,7 @@ CELERY_RESULT_BACKEND = "redis://localhost:6379"
 MAX_LIMIT_REQUEST = int(10)
 
 
-# TODO : Time object to restart the server after certain amount of time
+# TODO : Time object to restart counting after certain amount of time
 TIME_LAPSE = timedelta(hours=0, minutes=0, seconds=10)
 
 
